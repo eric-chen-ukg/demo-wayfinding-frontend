@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.typing-ellipsis {
+  font-size: 1.5em;
+}
+
+.typing-ellipsis:after {
+  vertical-align: bottom;
+  display: inline-block;
+  content: "\2026";
+  animation: ellipsis steps(8, end) 1.5s infinite;
+  width: 0px;
+  overflow: hidden;
+}
+
+@keyframes ellipsis {
+  to {
+    width: 1em;
+  }
+}
