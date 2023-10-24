@@ -9,7 +9,6 @@ interface TableCardProps {
 }
 
 const TableCard = (props: TableCardProps) => {
-
     const rowData = props.card.data.table.rowData;
     const columnDefs = props.card.data.table.columnDefs;
 
@@ -18,10 +17,9 @@ const TableCard = (props: TableCardProps) => {
             return <ReactMarkdown rehypePlugins={[rehypeRaw]}>{props.card.message}</ReactMarkdown>
         }
     }
-    console.log(props.card)
 
     return (
-        <div className="w-full mx-auto overflow-x-auto">
+        <div className="w-full">
             {renderMessage()}
             <table className="table-fixed w-[90%] shadow-md rounded-lg border">
                 <thead>

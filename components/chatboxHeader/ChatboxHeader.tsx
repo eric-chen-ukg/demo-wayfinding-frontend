@@ -38,11 +38,11 @@ const ChatboxHeader = (props: ChatboxHeaderProps) => {
     }
 
     return (
-        <div className="p-4 w-full h-[15%] bg-zinc-100/90 rounded-t-xl flex justify-between relative">
+        <div className="p-4 w-full h-[15%] bot-bg rounded-t-xl flex justify-between relative">
             <div className="flex">
                 <div className="flex h-full">
                     <Image className="object-contain" width={50} src={aiStar} alt="ai-star" />
-                    <span className="text-purple-900/80 font-semibold text-[1.5em] px-3 my-auto">
+                    <span className="header-text-color font-semibold text-[1.5em] px-3 my-auto">
                         BryteAI
                     </span>
                 </div>

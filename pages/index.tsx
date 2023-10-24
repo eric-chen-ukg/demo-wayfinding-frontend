@@ -8,7 +8,7 @@ export default function Home() {
     <div
       className='w-full h-full'>
       <Image
-        className='object-contain'
+        className='w-full h-full object-cover overflow-y-hidden'
         src={ericDimensionsHome} alt="user-dimensions-home"></Image>
       <Chatbox />
     </div>

@@ -39,7 +39,7 @@ const ChatboxMessage: React.FC<ChatboxMessageProps> = ({
     return (
         <div className={`
             w-full h-auto flex px-4 py-3
-            ${user ? "bg-white" : "bg-zinc-100/90"}
+            ${user ? "bg-white" : "bot-bg"}
         `}>
             {user ?
                 <div className="mx-6 rounded-full">
@@ -58,8 +58,8 @@ const ChatboxMessage: React.FC<ChatboxMessageProps> = ({
                 {!user && message.length > 0 && (
                     <div className="flex gap-3">
                         <div className="font-light text-gray-500 text-[0.9em]">Is this helpful?</div>
-                        <div className="text-blue-800 text-[1.5em] -translate-y-1 hover:cursor-pointer"><AiOutlineLike /></div>
-                        <div className="text-blue-800 text-[1.5em] -translate-y-1 hover:cursor-pointer"><AiOutlineDislike /></div>
+                        <div className="like-dislike-color text-[1.5em] -translate-y-1 hover:cursor-pointer"><AiOutlineLike /></div>
+                        <div className="like-dislike-color text-[1.5em] -translate-y-1 hover:cursor-pointer"><AiOutlineDislike /></div>
                     </div>)
                 }
                 {!user && message.length == 0 && (

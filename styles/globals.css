@@ -20,3 +20,15 @@
     width: 1em;
   }
 }
+
+.bot-bg {
+  background-color: rgba(238, 247, 248, 255);
+}
+
+.header-text-color {
+  color: rgba(61, 66, 111, 255);
+}
+
+.like-dislike-color {
+  color: rgba(2, 119, 178, 255);
+}

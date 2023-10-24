@@ -8,41 +8,6 @@ import { Message } from "@/types/Message";
 import axios from 'axios';
 import { ButtonContract, CardContract } from "@/types/Card";
 
-export const options = [
-    'exploratory',
-    'gptw',
-    'submitpto',
-    'schedule',
-    'schedrec',
-    'personsearch',
-    'accruals',
-    'benefits',
-    'punches',
-    'addresschange',
-    'shiftswap',
-    'paychecks',
-    'availability',
-    'locationPreference',
-    'companypolicy',
-    'conversational'
-];
-
-// const dropdownAsButtons = (options) => {
-//     let dropdownButtons;
-//     options.map((option: string) => {
-//         dropdownButtons.push({
-//             "id": option,
-//             "label": "Voluntary Life & AD&D SP",
-//             "icon": "paginate-right",
-//             "userQuery": "Voluntary Life & AD&D SP"
-//         })
-//     })
-//     return {
-//         type: "markdown",
-//         options: dropdownButtons
-//     }
-// }
-
 const list: Message[] = [{
     user: false,
     message: ["Hi I'm BryteAI, your personal virtual assistant.", "What can I help you with today?"]
