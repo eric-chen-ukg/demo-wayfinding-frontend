@@ -35,7 +35,6 @@ const Chatbox = () => {
             message: aiMessage
         }
         setMessageList(prev => [message, ...prev]);
-        console.log(messageList)
     }
 
     const queryServer = async (message: string, customIntent: string = intent) => {
@@ -48,7 +47,7 @@ const Chatbox = () => {
                 }
             }).then(res => res.data);
 
-            console.log(response);
+            // console.log(response);
             handleAISendResponse(response);
         } catch (error) {
             console.error(error);

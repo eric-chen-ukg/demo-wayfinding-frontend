@@ -53,7 +53,7 @@ const ChatboxFooter = (props: ChatboxFooterProps) => {
                 <div
                     className="text-[1.75em] my-auto
                     text-blue-600 bottom hover:cursor-pointer"
-                    onClick={props.sendMessage}
+                    onClick={() => props.sendMessage(props.userInput)}
                 ><IoMdSend /></div>
             </div>
         </div>

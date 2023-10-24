@@ -56,13 +56,18 @@ const ChatboxMessages: React.FC<ChatboxMessagesProps> = ({
 }) => {
     const messagesEndRef = useRef<HTMLDivElement>(null);
     useEffect(() => {
-        messagesEndRef.current?.scrollIntoView(true);
+        setTimeout(() => {
+            messagesEndRef.current?.scrollIntoView({
+                block: "end",
+                behavior: "smooth",
+            });
+        }, 5000);
     }, []);
 
     return (
         <div className="w-full h-auto max-h-[75%] flex flex-col-reverse overflow-x-hidden overflow-y-auto">
             {loading && (
-                <div>
+                <div ref={messagesEndRef}>
                     <ChatboxMessage user={false} message={[]} optionClick={optionClick} />
                 </div>
             )}
@@ -71,9 +76,7 @@ const ChatboxMessages: React.FC<ChatboxMessagesProps> = ({
                     <ChatboxMessage user={message.user} message={message.message} optionClick={optionClick} />
                 </div>
             ))}
-            <div className={`
-                w-full h-auto flex px-4 py-3 bot-bg
-            `}>
+            <div className={`w-full h-auto flex px-4 py-3 bot-bg`}>
                 <div className="mx-6 rounded-full">
                     <Image
                         className="aspect-square my-2 object-cover"
@@ -86,7 +89,6 @@ const ChatboxMessages: React.FC<ChatboxMessagesProps> = ({
                     <Card card={welcomeOptionsCard} optionClick={optionClick} />
                 </div>
             </div>
-            <div ref={messagesEndRef} />
         </div>
     )
 }

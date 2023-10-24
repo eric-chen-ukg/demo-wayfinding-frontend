@@ -55,7 +55,7 @@ const ChatboxHeader = (props: ChatboxHeaderProps) => {
                     />
                 </div>
             </div>
-            <div className="mx-4 mt-3 text-3xl hover:cursor-pointer"><AiOutlineClose /></div>
+            <div className="mx-4 mt-3 text-3xl hidden md:block hover:cursor-pointer"><AiOutlineClose /></div>
         </div>
     )
 }

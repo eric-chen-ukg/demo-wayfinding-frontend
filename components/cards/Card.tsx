@@ -23,7 +23,6 @@ const Card = (props: CardProps) => {
 
     const renderOptions = () => {
         if (props.card.options) {
-            console.log(Math.ceil(props.card.options.length / 5))
             return (
                 <div
                     className={`
