@@ -23,8 +23,16 @@ const Card = (props: CardProps) => {
 
     const renderOptions = () => {
         if (props.card.options) {
+            console.log(Math.ceil(props.card.options.length / 5))
             return (
-                <div className="grid grid-cols-5 gap-4 mt-4">
+                <div
+                    className={`
+                        ${"grid-rows-" + Math.ceil(props.card.options.length / 5)}
+                        grid gap-4 mt-4
+                        sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 
+                        `
+                    }
+                >
                     {props.card.options.map((o, i) => <OptionButton option={o} key={i} onClick={optionClick} />)}
                 </div>
             )

@@ -1,5 +1,8 @@
 import { TableCardContract } from "@/types/Card";
 import ReactMarkdown from 'react-markdown';
+import rehypeRaw from "rehype-raw";
+
+
 
 interface TableCardProps {
     card: TableCardContract
@@ -12,7 +15,7 @@ const TableCard = (props: TableCardProps) => {
 
     const renderMessage = () => {
         if (props.card.message) {
-            return <ReactMarkdown>{props.card.message}</ReactMarkdown>
+            return <ReactMarkdown rehypePlugins={[rehypeRaw]}>{props.card.message}</ReactMarkdown>
         }
     }
     console.log(props.card)
@@ -20,9 +23,9 @@ const TableCard = (props: TableCardProps) => {
     return (
         <div className="w-full mx-auto overflow-x-auto">
             {renderMessage()}
-            <table className="table-fixed w-[90%] border shadow-md">
-                <thead className="w-full">
-                    <tr className="w-full border">
+            <table className="table-fixed w-[90%] shadow-md rounded-lg border">
+                <thead>
+                    <tr>
                         {columnDefs.map((c, i) => <th className="text-left px-3 py-2" key={i}>{c.field}</th>)}
                     </tr>
                 </thead>

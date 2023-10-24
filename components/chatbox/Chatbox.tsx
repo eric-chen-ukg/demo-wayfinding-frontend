@@ -78,16 +78,20 @@ const Chatbox = () => {
 
     const queryServer = async (message: string, customIntent: string = intent) => {
         setIsLoading(true);
-        console.log(isLoading)
-        const response = await axios.get(url, {
-            params: {
-                intent: customIntent,
-                query: message
-            }
-        }).then(res => res.data);
+        try {
+            const response = await axios.get(url, {
+                params: {
+                    intent: customIntent,
+                    query: message
+                }
+            }).then(res => res.data);
 
-        console.log(response);
-        handleAISendResponse(response);
+            console.log(response);
+            handleAISendResponse(response);
+        } catch (error) {
+            console.error(error);
+            handleAISendResponse(['A server error occured...'])
+        }
         setIsLoading(false);
     }
 

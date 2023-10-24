@@ -1,5 +1,6 @@
 import { MarkdownCardContract } from "@/types/Card";
 import ReactMarkdown from 'react-markdown';
+import rehypeRaw from "rehype-raw";
 
 interface MarkdownCardProps {
     card: MarkdownCardContract
@@ -11,7 +12,7 @@ const MarkdownCard = (props: MarkdownCardProps) => {
 
     return (
         <div>
-            <ReactMarkdown>{message}</ReactMarkdown>
+            <ReactMarkdown rehypePlugins={[rehypeRaw]} >{message}</ReactMarkdown>
         </div>
     );
 }
