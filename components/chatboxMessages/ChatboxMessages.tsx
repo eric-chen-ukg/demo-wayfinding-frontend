@@ -56,7 +56,7 @@ const ChatboxMessages: React.FC<ChatboxMessagesProps> = ({
 }) => {
     const messagesEndRef = useRef<HTMLDivElement>(null);
     useEffect(() => {
-        messagesEndRef.current?.scrollIntoView();
+        messagesEndRef.current?.scrollIntoView(true);
     }, []);
 
     return (
