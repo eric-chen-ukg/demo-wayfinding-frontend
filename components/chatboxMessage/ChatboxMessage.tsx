@@ -49,7 +49,7 @@ const ChatboxMessage: React.FC<ChatboxMessageProps> = ({
                 </div> :
                 <div className="mx-6 rounded-full">
                     <Image
-                        className="rounded-[100%] aspect-square my-2 object-cover"
+                        className="aspect-square my-2 object-cover"
                         src={aiStar} width={50} alt="ai-avatar" />
                 </div>
             }
