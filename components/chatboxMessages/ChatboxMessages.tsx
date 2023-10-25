@@ -61,11 +61,11 @@ const ChatboxMessages: React.FC<ChatboxMessagesProps> = ({
                 block: "end",
                 behavior: "smooth",
             });
-        }, 5000);
+        }, 1000);
     }, []);
 
     return (
-        <div className="w-full h-auto max-h-[75%] flex flex-col-reverse overflow-x-hidden overflow-y-auto">
+        <div className="w-full h-auto max-h-[75%] flex flex-col-reverse overflow-x-auto overflow-y-auto">
             {loading && (
                 <div ref={messagesEndRef}>
                     <ChatboxMessage user={false} message={[]} optionClick={optionClick} />

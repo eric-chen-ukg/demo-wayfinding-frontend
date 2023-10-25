@@ -51,7 +51,7 @@ const Chatbox = () => {
             handleAISendResponse(response);
         } catch (error) {
             console.error(error);
-            handleAISendResponse(['A server error occured...'])
+            handleAISendResponse([`Sorry, our server has ecountered an error.`, `Please try again in a bit, thank you.`])
         }
         setIsLoading(false);
     }
