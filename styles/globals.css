@@ -25,8 +25,21 @@
   background-color: rgba(238, 247, 248, 255);
 }
 
+.ukg-green-bg {
+  background-color: rgba(7, 118, 116, 255);
+}
+
 .header-text-color {
   color: rgba(61, 66, 111, 255);
+}
+
+.border-purple-btn {
+  border-color: rgba(61, 66, 111, 255);
+}
+
+.mobile-btn-blue {
+  color: #7db9d7;
+  border-color: #7db9d7;
 }
 
 .like-dislike-color {
