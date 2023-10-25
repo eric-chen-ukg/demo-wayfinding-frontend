@@ -8,16 +8,8 @@ const welcomeOptionsCard = {
     type: "markdown",
     options: [
         {
-            id: "submitpto",
-            label: "Time Off",
-            userQuery: "I want to take some time off.",
-            data: {
-                action: "change-intent",
-                target: "submitpto"
-            }
-        }, {
             id: "benefits",
-            label: "Benefits",
+            label: "My Benefits",
             userQuery: "I want to see my benefits.",
             data: {
                 action: "change-intent",
@@ -25,11 +17,19 @@ const welcomeOptionsCard = {
             }
         }, {
             id: "paychecks",
-            label: "Pay History",
+            label: "My Pay History",
             userQuery: "I want to see my recent pay stubs.",
             data: {
                 action: "change-intent",
                 target: "paychecks"
+            }
+        }, {
+            id: "submitpto",
+            label: "Request Time Off",
+            userQuery: "I want to take some time off.",
+            data: {
+                action: "change-intent",
+                target: "submitpto"
             }
         }, {
             id: "companypolicy",
@@ -65,7 +65,7 @@ const ChatboxMessages: React.FC<ChatboxMessagesProps> = ({
     }, []);
 
     return (
-        <div className="w-full h-auto max-h-[75%] flex flex-col-reverse overflow-x-auto overflow-y-auto">
+        <div className="w-full h-auto max-h-[80%] md:max-h-[75%] flex flex-col-reverse overflow-x-auto overflow-y-auto">
             {loading && (
                 <div ref={messagesEndRef}>
                     <ChatboxMessage user={false} message={[]} optionClick={optionClick} />
@@ -76,16 +76,17 @@ const ChatboxMessages: React.FC<ChatboxMessagesProps> = ({
                     <ChatboxMessage user={message.user} message={message.message} optionClick={optionClick} />
                 </div>
             ))}
-            <div className={`w-full h-auto flex px-4 py-3 bot-bg`}>
+            <div className={`w-full h-auto flex md:px-4 py-3 bot-bg`}>
                 <div className="mx-6 rounded-full">
                     <Image
                         className="aspect-square my-2 object-cover"
                         src={aiStar} width={50} alt="ai-avatar" />
                 </div>
-                <div className="w-[75%] flex flex-col gap-4 mb-4">
-                    <div className="text-[1.5em] header-text-color font-semibold">Hi, I'm UKG's AI</div>
-                    <div className="text-[1.2em] header-text-color">I'm here to make your life easier, so you can focus on the things that matter most to you.</div>
-                    <div className="header-text-color">Was there anything specific you wanted to ask or maybe we can start with?</div>
+                <div className="w-[75%] pr-6 flex flex-col gap-4 mb-4">
+                    <div className="text-[1.5em] header-text-color font-semibold">Hi, I'm UKG Bryte</div>
+                    <div className="text-[1.2em] header-text-color md:block hidden">I'm here to make your life easier, so you can focus on the things that matter most to you.</div>
+                    <div className="header-text-color md:block hidden">Was there anything specific you wanted to ask or maybe we can start with?</div>
+                    <div className="header-text-color md:hidden">Here are some topics you might be interested in:</div>
                     <Card card={welcomeOptionsCard} optionClick={optionClick} />
                 </div>
             </div>

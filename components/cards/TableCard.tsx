@@ -19,9 +19,9 @@ const TableCard = (props: TableCardProps) => {
     }
 
     return (
-        <div className="w-full">
+        <div className="w-full text-black">
             {renderMessage()}
-            <table className="table-fixed w-[90%] shadow-md rounded-lg border">
+            <table className="table-fixed w-[100%] md:w-[90%] shadow-md rounded-lg border">
                 <thead>
                     <tr>
                         {columnDefs.map((c, i) => <th className="text-left px-3 py-2" key={i}>{c.field}</th>)}

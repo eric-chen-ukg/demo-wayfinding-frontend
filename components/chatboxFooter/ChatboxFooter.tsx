@@ -47,11 +47,11 @@ const ChatboxFooter = (props: ChatboxFooterProps) => {
                     rounded-full absolute bottom-0"
         >
             <div className={divStyles()}>
-                <div className="w-[95%] my-auto">
+                <div className="w-[100%] md:w-[95%] my-auto">
                     <Input value={props.userInput} onChange={props.setUserInput} onKeyDown={handleEnterPress} onFocus={onFocus} onBlur={onBlur} />
                 </div>
                 <div
-                    className="text-[1.75em] my-auto
+                    className="text-[1.75em] my-auto hidden md:block
                     text-blue-600 bottom hover:cursor-pointer"
                     onClick={() => props.sendMessage(props.userInput)}
                 ><IoMdSend /></div>

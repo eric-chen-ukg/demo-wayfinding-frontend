@@ -77,9 +77,18 @@ const Chatbox = () => {
                 outline-none bg-neutral-800/40
             '
         >
-            <div className="relative w-3/5 mx-auto h-5/6 my-auto">
+            <div className="hidden md:block relative w-3/5 mx-auto h-5/6 min-h-[550px] my-auto">
                 <div className="translate duration-300 h-full opacity-100 my-auto">
                     <div className="translate my-auto h-full border-0 rounded-2xl shadow-lg relative flex flex-col w-full bg-white outline-none">
+                        <ChatboxHeader intent={intent} setIntent={setIntent} />
+                        <ChatboxMessages messageList={messageList} loading={isLoading} optionClick={handleOptionClick} />
+                        <ChatboxFooter userInput={userInput} setUserInput={setUserInput} sendMessage={handleUserSend} />
+                    </div>
+                </div>
+            </div>
+            <div className="block md:hidden relative w-full mx-auto h-full min-h-[550px] my-auto">
+                <div className="translate duration-300 h-full opacity-100 my-auto">
+                    <div className="translate my-auto h-full border-0 shadow-lg relative flex flex-col w-full bg-white outline-none">
                         <ChatboxHeader intent={intent} setIntent={setIntent} />
                         <ChatboxMessages messageList={messageList} loading={isLoading} optionClick={handleOptionClick} />
                         <ChatboxFooter userInput={userInput} setUserInput={setUserInput} sendMessage={handleUserSend} />
