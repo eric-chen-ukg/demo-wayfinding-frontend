@@ -9,6 +9,7 @@ import axios from 'axios';
 import { ButtonContract, CardContract } from "@/types/Card";
 
 const list: Message[] = [];
+const conversationId = Math.floor(Math.random() * 10000);
 
 const Chatbox = () => {
     const { intent, setIntent } = useContext(IntentContext);
@@ -16,8 +17,10 @@ const Chatbox = () => {
     const [userInput, setUserInput] = useState<string>('');
     const [isLoading, setIsLoading] = useState(false);
 
-    // hardcoded
-    const url = `http://localhost:3009/answer`;
+    // dlas deploy
+    const url = `https://conversation-assistant.assistant.dlas1.ucloud.int/answer`;
+    // local deploy
+    // const url = `https://localhost:3000/answer`;
 
     const handleUserSend = (customMessage: string = userInput, customIntent: string = intent) => {
         const message: Message = {
@@ -43,7 +46,8 @@ const Chatbox = () => {
             const response = await axios.get(url, {
                 params: {
                     intent: customIntent,
-                    query: message
+                    query: message,
+                    conversationId: conversationId
                 }
             }).then(res => res.data);
 

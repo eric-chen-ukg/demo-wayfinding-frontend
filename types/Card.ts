@@ -5,6 +5,7 @@ export interface CardContract {
 
 export interface MarkdownCardContract extends CardContract {
     message: string,
+    navigation?: any[]
 }
 
 interface ColumnDefs {

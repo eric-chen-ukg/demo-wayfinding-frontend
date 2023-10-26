@@ -1,5 +1,6 @@
 import Image from "next/image";
 import aiStar from "assets/images/ai-star.png";
+import bryteLogo from "assets/images/bryte-logo.svg";
 import { AiOutlineArrowLeft, AiOutlineClose } from "react-icons/ai";
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
@@ -40,12 +41,12 @@ const ChatboxHeader = (props: ChatboxHeaderProps) => {
     }
 
     return (
-        <div className="w-full sm:h-[10%] bot-bg md:h-[15%] md:rounded-t-xl flex justify-between relative">
+        <div className="w-full sm:h-[10%] bg-gradient-to-r from-orange-figma to-purple-figma md:h-[15%] md:rounded-t-xl flex justify-between relative">
             <div className="md:block hidden p-4 flex">
                 <div className="flex h-full">
-                    <Image className="object-contain" width={50} src={aiStar} alt="ai-star" />
+                    <Image className="object-contain" width={50} src={bryteLogo} alt="ai-star" />
                     <span className="header-text-color font-semibold text-[1.5em] px-3 my-auto">
-                        Bryte AI
+                        Ask Bryte AI
                     </span>
                     <div className="hidden md:block my-auto ml-8">
                         <Dropdown

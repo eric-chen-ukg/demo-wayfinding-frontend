@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import ChatboxMessage from "../chatboxMessage/ChatboxMessage";
 import Image from "next/image";
 import aiStar from "assets/images/ai-star.png";
+import bryteLogo from "assets/images/bryte-logo.svg";
 import Card from "../cards/Card";
 
 const welcomeOptionsCard = {
@@ -68,6 +69,8 @@ const ChatboxMessages: React.FC<ChatboxMessagesProps> = ({
         <div className="w-full h-auto max-h-[80%] md:max-h-[75%] flex flex-col-reverse overflow-x-auto overflow-y-auto">
             {loading && (
                 <div ref={messagesEndRef}>
+                    {/* <div className="w-16 h-16 border-t-4 border-blue-500 border-solid rounded-full animate-spin"></div> */}
+
                     <ChatboxMessage user={false} message={[]} optionClick={optionClick} />
                 </div>
             )}
@@ -76,11 +79,11 @@ const ChatboxMessages: React.FC<ChatboxMessagesProps> = ({
                     <ChatboxMessage user={message.user} message={message.message} optionClick={optionClick} />
                 </div>
             ))}
-            <div className={`w-full h-auto flex md:px-4 py-3 bot-bg`}>
+            <div className={`w-full h-auto flex md:px-4 py-3 bg-gradient-to-br from-orange-figma to-purple-figma`}>
                 <div className="mx-6 rounded-full">
                     <Image
                         className="aspect-square my-2 object-cover"
-                        src={aiStar} width={50} alt="ai-avatar" />
+                        src={bryteLogo} width={50} alt="ai-avatar" />
                 </div>
                 <div className="w-[75%] pr-6 flex flex-col gap-4 mb-4">
                     <div className="text-[1.5em] header-text-color font-semibold">Welcome to Bryte AI</div>

@@ -21,6 +21,16 @@
   }
 }
 
+.from-orange-figma {
+  --tw-gradient-from: rgba(255, 241, 220, 255) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(249 115 22 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.to-purple-figma {
+  --tw-gradient-to: rgba(231, 228, 249, 255) var(--tw-gradient-to-position);
+}
+
 .bot-bg {
   /* background-color: rgba(238, 247, 248, 255); */
   background-color: #f3f2f9;

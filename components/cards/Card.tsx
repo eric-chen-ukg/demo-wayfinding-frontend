@@ -14,6 +14,7 @@ const Card = (props: CardProps) => {
     const optionClick = props.optionClick;
 
     const renderCard = () => {
+        console.log(props.card)
         if (type === 'markdown') {
             return <MarkdownCard card={props.card as MarkdownCardContract} />
         } else if (type === 'table') {

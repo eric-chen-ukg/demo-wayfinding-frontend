@@ -1,5 +1,6 @@
 import { CardContract } from "@/types/Card";
 import aiStar from "assets/images/ai-star.png";
+import bryteLogo from "assets/images/bryte-logo.svg";
 import userAvatar from "assets/images/user-avatar.jpeg";
 import Image from "next/image";
 import { AiOutlineLike, AiOutlineDislike } from 'react-icons/ai';
@@ -39,7 +40,7 @@ const ChatboxMessage: React.FC<ChatboxMessageProps> = ({
     return (
         <div className={`
             w-full h-auto flex md:px-4 py-3
-            ${user ? "bg-white" : "bot-bg"}
+            ${user ? "bg-white" : "bg-gradient-to-br from-orange-figma to-purple-figma"}
             ${user ? "text-black" : "md:text-black header-text-color"}
         `}>
             {user ?
@@ -51,7 +52,7 @@ const ChatboxMessage: React.FC<ChatboxMessageProps> = ({
                 <div className="mx-4 md:mx-6 rounded-full">
                     <Image
                         className="aspect-square my-2 object-cover"
-                        src={aiStar} width={50} alt="ai-avatar" />
+                        src={bryteLogo} width={50} alt="ai-avatar" />
                 </div>
             }
             <div className="pr-6 mb-2 mt-2 flex flex-col gap-2 w-full">
