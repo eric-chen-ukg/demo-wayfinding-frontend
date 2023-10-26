@@ -10,7 +10,7 @@ const welcomeOptionsCard = {
     options: [
         {
             id: "benefits",
-            label: "My Benefits",
+            label: "Show me my benefits",
             userQuery: "I want to see my benefits.",
             data: {
                 action: "change-intent",
@@ -18,7 +18,7 @@ const welcomeOptionsCard = {
             }
         }, {
             id: "paychecks",
-            label: "My Pay History",
+            label: "Can I see my pay history?",
             userQuery: "I want to see my recent pay stubs.",
             data: {
                 action: "change-intent",
@@ -26,7 +26,7 @@ const welcomeOptionsCard = {
             }
         }, {
             id: "submitpto",
-            label: "Request Time Off",
+            label: "Help me take time off",
             userQuery: "I want to take some time off.",
             data: {
                 action: "change-intent",
@@ -34,11 +34,11 @@ const welcomeOptionsCard = {
             }
         }, {
             id: "handbook",
-            label: "Company Policy",
-            userQuery: "I want to see my company's policy documents.",
+            label: "What holidays do we have?",
+            userQuery: "What are my company's holidays?",
             data: {
                 action: "change-intent",
-                target: "handbook"
+                target: "companypolicy"
             }
         }
     ]
