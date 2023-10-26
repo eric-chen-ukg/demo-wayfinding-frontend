@@ -19,8 +19,10 @@ export const options = [
     'paychecks',
     'availability',
     'locationPreference',
+    'handbook',
+    'conversational',
     'companypolicy',
-    'conversational'
+
 ];
 
 interface ChatboxHeaderProps {
@@ -43,17 +45,17 @@ const ChatboxHeader = (props: ChatboxHeaderProps) => {
                 <div className="flex h-full">
                     <Image className="object-contain" width={50} src={aiStar} alt="ai-star" />
                     <span className="header-text-color font-semibold text-[1.5em] px-3 my-auto">
-                        BryteAI
+                        Bryte AI
                     </span>
+                    <div className="hidden md:block my-auto ml-8">
+                        <Dropdown
+                            className="opacity-0 hover:opacity-100"
+                            options={options.map(option => ({ value: option, label: option }))}
+                            onChange={handleIntentChange}
+                            value={{ value: intent, label: intent }}
+                        />
+                    </div>
                 </div>
-            </div>
-            <div className="hidden md:block my-auto ml-8">
-                <Dropdown
-                    className="opacity-0 hover:opacity-100"
-                    options={options.map(option => ({ value: option, label: option }))}
-                    onChange={handleIntentChange}
-                    value={{ value: intent, label: intent }}
-                />
             </div>
             <div className="mx-4 mt-3 p-4 text-3xl hidden md:block hover:cursor-pointer"><AiOutlineClose /></div>
             <div className="md:hidden block p-4 w-full ukg-green-bg">

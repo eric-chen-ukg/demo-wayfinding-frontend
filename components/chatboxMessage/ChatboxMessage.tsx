@@ -52,7 +52,7 @@ const ChatboxMessage: React.FC<ChatboxMessageProps> = ({
                     <Image
                         className="aspect-square my-2 object-cover"
                         src={aiStar} width={50} alt="ai-avatar" />
-                </div>
+                </div>  
             }
             <div className="pr-6 mb-2 mt-2 flex flex-col gap-2 w-full">
                 {processMessage(message)}

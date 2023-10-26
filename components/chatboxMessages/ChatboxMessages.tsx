@@ -32,12 +32,12 @@ const welcomeOptionsCard = {
                 target: "submitpto"
             }
         }, {
-            id: "companypolicy",
+            id: "handbook",
             label: "Company Policy",
             userQuery: "I want to see my company's policy documents.",
             data: {
                 action: "change-intent",
-                target: "companypolicy"
+                target: "handbook"
             }
         }
     ]
