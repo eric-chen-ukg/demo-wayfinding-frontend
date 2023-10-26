@@ -65,23 +65,8 @@ const ChatboxMessages: React.FC<ChatboxMessagesProps> = ({
         }, 1000);
     }, []);
 
-    return (
-        <div className="w-full h-auto max-h-[80%] md:max-h-[75%] flex flex-col-reverse overflow-x-auto overflow-y-auto">
-            {loading && (
-                <div ref={messagesEndRef}>
-                    <div className="flex justify-center items-center mb-96">
-                        <div className="flex justify-center items-center w-20 h-20 loader-border rounded-full animate-spin">
-                            <div className="w-16 h-16 bg-white rounded-full animate-spin"></div>
-                        </div>
-                    </div>
-                    {/* <ChatboxMessage user={false} message={[]} optionClick={optionClick} /> */}
-                </div>
-            )}
-            {messageList.map((message, idx) => (
-                <div key={idx}>
-                    <ChatboxMessage user={message.user} message={message.message} optionClick={optionClick} />
-                </div>
-            ))}
+    const renderWelcomeMessage = () => {
+        return (
             <div className={`w-full h-auto flex md:px-4 py-3 bg-gradient-to-br from-orange-figma to-purple-figma`}>
                 <div className="mx-6 rounded-full">
                     <Image
@@ -96,6 +81,27 @@ const ChatboxMessages: React.FC<ChatboxMessagesProps> = ({
                     <Card card={welcomeOptionsCard} optionClick={optionClick} />
                 </div>
             </div>
+        )
+    }
+
+    return (
+        <div className="w-full h-auto max-h-[80%] md:max-h-[75%] flex flex-col-reverse overflow-x-auto overflow-y-auto">
+            {loading && (
+                <div ref={messagesEndRef}>
+                    <div className="flex justify-center items-center mb-[30vh]">
+                        <div className="flex justify-center items-center w-20 h-20 loader-border rounded-full animate-spin">
+                            <div className="w-16 h-16 bg-white rounded-full animate-spin"></div>
+                        </div>
+                    </div>
+                    {/* <ChatboxMessage user={false} message={[]} optionClick={optionClick} /> */}
+                </div>
+            )}
+            {messageList.map((message, idx) => (
+                <div key={idx}>
+                    <ChatboxMessage user={message.user} message={message.message} optionClick={optionClick} />
+                </div>
+            ))}
+            {renderWelcomeMessage()}
         </div>
     )
 }

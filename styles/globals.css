@@ -32,7 +32,7 @@
 }
 
 .loader-border {
-  background: linear-gradient(to right, rgb(189, 188, 188) 60%, #FFAE31 60%, #AB5EBD 75%, #4D40B5 90%);
+  background: linear-gradient(to right, rgb(189, 188, 188) 60%, #FFAE31 75%, #AB5EBD 90%, #4D40B5 100%);
 }
 
 .bot-bg {
