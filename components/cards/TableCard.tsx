@@ -24,7 +24,7 @@ const TableCard = (props: TableCardProps) => {
             <table className="table-fixed bg-zinc-50 w-[100%] md:w-[90%] rounded-2xl shadow-sm border border-spacing-0 border-separate">
                 <thead>
                     <tr>
-                        {columnDefs.map((c, i) => <th className="text-left px-3 py-2 border-b-2" key={i}>{c.field}</th>)}
+                        {columnDefs.map((c, i) => <th className="text-left px-3 py-2 border-b border-b-zinc-600" key={i}>{c.field}</th>)}
                     </tr>
                 </thead>
                 <tbody>

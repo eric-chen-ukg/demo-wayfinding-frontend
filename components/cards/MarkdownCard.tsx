@@ -9,6 +9,9 @@ interface MarkdownCardProps {
 
 const MarkdownCard = (props: MarkdownCardProps) => {
     const { type, message, options, navigation } = props.card;
+    let processedMessage;
+    message == "**Go to**" ? processedMessage = "**Bryte AI**" : processedMessage = message;
+
     const handleGoToUrl = (nav: any) => {
         window.open(nav.url, "_blank");
     };
@@ -32,8 +35,7 @@ const MarkdownCard = (props: MarkdownCardProps) => {
 
     return (
         <div>
-            <ReactMarkdown className="whitespace-pre-wrap" rehypePlugins={[rehypeRaw]} >{message}</ReactMarkdown>
-            {navigation && renderNavigation()}
+            <ReactMarkdown className="whitespace-pre-wrap" rehypePlugins={[rehypeRaw]}>{processedMessage}</ReactMarkdown>
         </div>
     );
 }

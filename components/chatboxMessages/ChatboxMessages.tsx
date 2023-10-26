@@ -69,9 +69,12 @@ const ChatboxMessages: React.FC<ChatboxMessagesProps> = ({
         <div className="w-full h-auto max-h-[80%] md:max-h-[75%] flex flex-col-reverse overflow-x-auto overflow-y-auto">
             {loading && (
                 <div ref={messagesEndRef}>
-                    {/* <div className="w-16 h-16 border-t-4 border-blue-500 border-solid rounded-full animate-spin"></div> */}
-
-                    <ChatboxMessage user={false} message={[]} optionClick={optionClick} />
+                    <div className="flex justify-center items-center mb-96">
+                        <div className="flex justify-center items-center w-20 h-20 loader-border rounded-full animate-spin">
+                            <div className="w-16 h-16 bg-white rounded-full animate-spin"></div>
+                        </div>
+                    </div>
+                    {/* <ChatboxMessage user={false} message={[]} optionClick={optionClick} /> */}
                 </div>
             )}
             {messageList.map((message, idx) => (

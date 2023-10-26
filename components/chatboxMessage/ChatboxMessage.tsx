@@ -65,7 +65,10 @@ const ChatboxMessage: React.FC<ChatboxMessageProps> = ({
                     </div>)
                 }
                 {!user && message.length == 0 && (
-                    <div className="typing-ellipsis">
+                    <div className="flex justify-center items-center">
+                        <div className="flex justify-center items-center w-20 h-20 loader-border rounded-full animate-spin">
+                            <div className="w-12 h-12 bg-white rounded-full animate-spin"></div>
+                        </div>
                     </div>
                 )}
             </div>

@@ -31,6 +31,10 @@
   --tw-gradient-to: rgba(231, 228, 249, 255) var(--tw-gradient-to-position);
 }
 
+.loader-border {
+  background: linear-gradient(to right, rgb(189, 188, 188) 60%, #FFAE31 60%, #AB5EBD 75%, #4D40B5 90%);
+}
+
 .bot-bg {
   /* background-color: rgba(238, 247, 248, 255); */
   background-color: #f3f2f9;
