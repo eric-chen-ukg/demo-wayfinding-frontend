@@ -83,9 +83,9 @@ const ChatboxMessages: React.FC<ChatboxMessagesProps> = ({
                         src={aiStar} width={50} alt="ai-avatar" />
                 </div>
                 <div className="w-[75%] pr-6 flex flex-col gap-4 mb-4">
-                    <div className="text-[1.5em] header-text-color font-semibold">Hi, I'm UKG Bryte</div>
-                    <div className="text-[1.2em] header-text-color md:block hidden">I'm here to make your life easier, so you can focus on the things that matter most to you.</div>
-                    <div className="header-text-color md:block hidden">Was there anything specific you wanted to ask or maybe we can start with?</div>
+                    <div className="text-[1.5em] header-text-color font-semibold">Welcome to Bryte AI</div>
+                    <div className="text-[1.2em] header-text-color md:block hidden">You can ask about things like taking time off, to see your most recent pay statement, or to review details about your benefits.</div>
+                    <div className="header-text-color md:block hidden">Here are some ideas to get you started:</div>
                     <div className="header-text-color md:hidden">Here are some topics you might be interested in:</div>
                     <Card card={welcomeOptionsCard} optionClick={optionClick} />
                 </div>

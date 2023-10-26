@@ -42,18 +42,15 @@ const ChatboxFooter = (props: ChatboxFooterProps) => {
     }
 
     return (
-        <div
-            className="w-full h-[10%] px-4 py-3
-                    rounded-full absolute bottom-0"
-        >
+        <div className="w-full h-[10%] px-4 py-3 
+            rounded-full absolute bottom-0">
             <div className={divStyles()}>
                 <div className="w-[100%] md:w-[95%] my-auto">
                     <Input value={props.userInput} onChange={props.setUserInput} onKeyDown={handleEnterPress} onFocus={onFocus} onBlur={onBlur} />
                 </div>
-                <div
+                <div onClick={() => props.sendMessage(props.userInput)}
                     className="text-[1.75em] my-auto hidden md:block
                     text-blue-600 bottom hover:cursor-pointer"
-                    onClick={() => props.sendMessage(props.userInput)}
                 ><IoMdSend /></div>
             </div>
         </div>

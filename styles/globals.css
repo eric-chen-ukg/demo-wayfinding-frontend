@@ -22,7 +22,8 @@
 }
 
 .bot-bg {
-  background-color: rgba(238, 247, 248, 255);
+  /* background-color: rgba(238, 247, 248, 255); */
+  background-color: #f3f2f9;
 }
 
 .ukg-green-bg {

@@ -7,12 +7,11 @@ interface MarkdownCardProps {
 }
 
 const MarkdownCard = (props: MarkdownCardProps) => {
-
     const { type, message, options } = props.card;
-
+    console.log(message)
     return (
         <div>
-            <ReactMarkdown rehypePlugins={[rehypeRaw]} >{message}</ReactMarkdown>
+            <ReactMarkdown className="whitespace-pre-wrap" rehypePlugins={[rehypeRaw]} >{message}</ReactMarkdown>
         </div>
     );
 }
