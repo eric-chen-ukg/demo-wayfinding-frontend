@@ -20,7 +20,7 @@ const Chatbox = () => {
     // dlas deploy
     const url = `https://conversation-assistant.assistant.dlas1.ucloud.int/answer`;
     // local deploy
-    // const url = `https://localhost:3000/answer`;
+    // const url = `http://localhost:3009/answer`;
 
     const handleUserSend = (customMessage: string = userInput, customIntent: string = intent) => {
         const message: Message = {
