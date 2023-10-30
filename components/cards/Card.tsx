@@ -2,6 +2,7 @@ import { CardContract, MarkdownCardContract, TableCardContract } from "@/types/C
 import MarkdownCard from "./MarkdownCard";
 import TableCard from "./TableCard";
 import OptionButton from "./OptionButton";
+import LinkButton from "./LinkButton";
 
 interface CardProps {
     card: CardContract,
@@ -27,7 +28,7 @@ const Card = (props: CardProps) => {
             return (
                 <div
                     className={`
-                        ${"grid-rows-" + Math.ceil(props.card.options.length / 5)}
+                        ${"grid-rows-" + Math.ceil(props.card.options.length / 3)}
                         grid gap-4 mt-4
                         sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 
                         `
@@ -39,10 +40,22 @@ const Card = (props: CardProps) => {
         }
     }
 
+    const renderButtonLinks = () => {
+        if (props.card.buttonLinks) {
+            return (
+                <div className="flex"
+                >
+                    {props.card.buttonLinks.map((l, idx) => <LinkButton link={l} key={idx}></LinkButton>)}
+                </div>
+            )
+        }
+    }
+
     return (
         <div>
             {renderCard()}
             {renderOptions()}
+            {renderButtonLinks()}
         </div>
     )
 }

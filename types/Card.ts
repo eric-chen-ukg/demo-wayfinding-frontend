@@ -1,6 +1,7 @@
 export interface CardContract {
     type: string,
-    options?: Array<ButtonContract>
+    options?: Array<ButtonContract>,
+    buttonLinks?: Array<ButtonLink>
 }
 
 export interface MarkdownCardContract extends CardContract {
@@ -21,6 +22,13 @@ export interface TableCardContract extends CardContract {
             rowData: any[]
         }
     }
+}
+
+export interface ButtonLink {
+    id: string,
+    label: string,
+    url: string,
+    icon?: string
 }
 
 export interface ButtonContract {
