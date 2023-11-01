@@ -43,8 +43,7 @@ const Card = (props: CardProps) => {
     const renderButtonLinks = () => {
         if (props.card.buttonLinks) {
             return (
-                <div className="flex mt-4"
-                >
+                <div className="flex mt-4">
                     {props.card.buttonLinks.map((l, idx) => <LinkButton link={l} key={idx}></LinkButton>)}
                 </div>
             )

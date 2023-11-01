@@ -21,9 +21,9 @@ const MarkdownCard = (props: MarkdownCardProps) => {
             return (
                 <div
                     className={`
-                        ${"grid-rows-" + Math.ceil(navigation.length / 5)}
+                        ${"grid-rows-" + Math.ceil(navigation.length / 3)}
                         grid gap-4 mt-4
-                        grid-cols-2 md:grid-cols-3 lg:grid-cols-4 
+                        grid-cols-1 md:grid-cols-2 lg:grid-cols-3 
                         `
                     }
                 >
@@ -36,6 +36,7 @@ const MarkdownCard = (props: MarkdownCardProps) => {
     return (
         <div>
             <ReactMarkdown className="whitespace-pre-wrap" rehypePlugins={[rehypeRaw]}>{processedMessage}</ReactMarkdown>
+            {/* {renderNavigation()} */}
         </div>
     );
 }
