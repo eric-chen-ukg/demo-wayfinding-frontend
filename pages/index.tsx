@@ -5,10 +5,9 @@ import Chatbox from '@/components/chatbox/Chatbox';
 
 export default function Home() {
   return (
-    <div
-      className='w-full h-full'>
+    <div className='w-full max-h-screen overflow-hidden'>
       <Image
-        className='w-full h-full object-cover overflow-y-hidden hidden md:block'
+        className='w-full h-full hidden md:block'
         src={ericDimensionsHome} alt="user-dimensions-home"></Image>
       <Chatbox />
     </div>
